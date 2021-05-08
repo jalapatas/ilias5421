@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<service xmlns="http://www.w3.org" version="$Id$"
+	id="amet">
+	<baseclasses>
+	</baseclasses>
+	<objects>
+	</objects>
+	<pluginslots>
+		<pluginslot id="amdc" name="AdvancedMDClaiming" />
+	</pluginslots>
+	<logging/>
+</service>

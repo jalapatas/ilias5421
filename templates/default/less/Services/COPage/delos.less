@@ -1,0 +1,539 @@
+/* --- Services/COPage ---*/
+
+a.ilEditSubmit {
+	background: url("@{background-images-path}ButtonsBack.png") repeat-x bottom white;
+	padding: 2px;
+	margin: 0;
+	border: 1px solid #bababa;
+	border-bottom-color: #808080;
+	border-right-color: #808080;
+	text-decoration: none;
+	font-size: 80%;
+	line-height: 14px;
+	cursor: pointer;
+}
+
+input.ilEditSubmit {
+	color: #2255a0;
+	padding: 1px;
+	margin: 0;
+	font-size: 12px;
+	line-height: 14px;
+	cursor: pointer;
+	background: url("@{background-images-path}ButtonsBack.png") repeat-x bottom white;
+	border: 1px solid #bababa;
+	border-bottom-color: #808080;
+	border-right-color: #808080;
+	&:hover {
+		color: black;
+	}
+}
+
+div.ilEditHelpline {
+	margin: 3px 0;
+	padding: 0;
+	font-size: 80%;
+	background-color: white;
+	color: black;
+}
+
+select.ilEditSelect {
+	background: none white;
+	border: 1px solid #bbb;
+	padding: 1px;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+div.il_droparea {
+	padding: 1px 5px;
+	border: 1px dashed #d0d0d0;
+	color: #d0d0d0;
+	text-align: center;
+	font-size: @font-size-small;
+	background-color: #fcfcfc;
+	cursor: pointer;
+}
+
+div.il_droparea:hover, div.ilCOPGDropActice, .il_droparea_valid_target {
+	border-color: lighten(@brand-secondary, 10%);
+	color: lighten(@brand-secondary, 10%);
+	background-color: lighten(@brand-secondary, 52%);	
+}
+
+div.ilCOPGNoPageContent {
+	padding: 20px 5px;
+	color: #a0a0a0;
+}
+
+
+div.il_editarea_nojs {
+	border-width: 1px dotted #999;
+}
+
+div.il_editarea {
+	border: 1px solid transparent;
+	min-height: 20px;
+}
+
+div.ilc_page_Page > div.il_editarea_disabled {
+	padding: 10px;
+}
+
+div.il_editarea_disabled {
+	border: 2px dotted @brand-warning;
+	min-height: 20px;
+}
+
+.ilCopgDisabledText {
+	color: @brand-warning;
+	position: absolute;
+	font-size: @font-size-small;
+	margin-top: -22px;
+	padding: 2px 5px;
+	background-color: @il-primary-container-bg;
+}
+
+div.il_editarea_active {
+	border: 1px solid #909090;
+	min-height: 20px;
+}
+
+div.il_editarea_selected {
+	border: 2px solid @brand-secondary;
+	min-height: 20px;
+}
+
+div.il_editarea_disabled_selected
+{
+	border: 2px solid @brand-warning;
+	min-height: 20px;
+}
+
+div.il_editarea_active_selected {
+	border: 2px solid black;
+	min-height: 20px;
+}
+
+.il_editmenu {
+	background-color: white;
+	color: black;
+	font-weight: normal;
+	text-align: left;
+	font-style: normal;
+	text-indent: 0;
+	font-size: 14px;
+	z-index: 5000;
+}
+
+table.il_editmenu td {
+	padding: 3px;
+}
+
+
+div.ilEditLabel {
+	position: absolute;
+	background-color: #f5f5f5;
+	font-size: 70%;
+	padding: 1px 3px;
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	border-color: #909090;
+}
+
+div.ilEditVAccordCntr {
+	margin-top: 15px;
+	padding: 5px;
+}
+
+div.ilEditVAccordICntr {
+	background-color: white;
+	margin-bottom: 15px;
+	border: 1px solid #9eadba;
+}
+
+div.ilEditVAccordIHead {
+	padding: 3px;
+	background-color: #e2eaf4;
+	text-align: left;
+	background-repeat: no-repeat;
+	background-position: 3px 4px;
+}
+
+div.ilEditVAccordICont {
+	padding: 10px;
+	background-color: white;
+}
+
+div.ilTinyMenuSection {
+	float: left;
+	white-space: nowrap;
+	border-right: 1px solid #e0e0e0;
+	padding: 0 10px 4px 0;
+	margin-right: 10px;
+	@media only screen and (max-width: @grid-float-breakpoint-max) {
+		height: 28px;
+		margin: 3px 3px 3px 0px;
+		padding: 0 10px 0 0;
+		border-right: 0 none;
+	}
+}
+
+[dir="rtl"] div.ilTinyMenuSection {
+	float: right;
+    border-right: none;
+    border-left: 1px solid #e0e0e0;
+    padding: 0 0 4px 10px;
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+#ilTinyMenuButtons {
+	padding-bottom: 15px;
+	zoom:1;
+	@media only screen and (max-width: @grid-float-breakpoint-max) {
+		height: 28px;
+		margin: 3px 3px 3px 0;
+		padding: 0 10px 0 0;
+		border-right: 0 none;
+	}
+}
+
+#iltinymenu .bd div.last {
+	float: left;
+	white-space: nowrap;
+	padding: 0 10px 2px 0;
+	border-right: 0;
+	margin: 0;
+}
+
+#iltinymenu {
+	z-index: 1040 !important;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: @il-secondary-container-bg;
+    .box-shadow(3px 9px 9px 0 rgba(0, 0, 0, 0.176));
+	.bd {
+		div {
+			&.last {
+				float: left;
+				white-space: nowrap;
+				padding: 0 10px 2px 0;
+				border-right: 0;
+				margin: 0;
+			}
+			.small {
+				color: #909090;
+				font-style: italic;
+			}
+		}
+	}
+	.btn-default {
+		.mce-ico {
+			color: inherit !important;
+		}
+	}
+	
+	a.btn {
+		min-width: 30px;
+	}
+}
+
+#iltinymenu_bd {
+	padding: 10px;
+}
+
+#ilsaving {
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-decoration: blink;
+	z-index: 3;
+}
+
+.ilTinyMenuDropDown span {
+	padding: 2px 0 0 5px;
+	width: 75px;
+	overflow: hidden;
+	display: inline-block;
+	line-height: 1em;
+}
+
+a.ilTinyMenuDropDown {
+	display: inline-block;
+	padding: 0 2px 1px 0;
+}
+
+/* if the ilc_page_cont_PageContainer is declared as being relative in the content.css drop downs will be truncated */
+#ilEditorTD {
+	position: static;
+}
+
+#ilEditorTD p {
+	margin: 0;
+	padding: 0;
+}
+
+/* Page TOC */
+div.ilc_page_toc_PageTOC {
+	font-size: 90%;
+	padding: 5px 5px 10px;
+	background-color: #fafafa;
+	border: 1px solid #f0f0f0;
+	float: left;
+}
+
+h1.ilc_page_toc_PageTOCHead {
+	margin: 0;
+	font-size: 100%;
+	padding: 0;
+	font-weight: bold;
+	text-align: center;
+}
+
+ul.ilc_page_toc_PageTOCList {
+	margin: 0 0 0 10px;
+	padding: 0;
+	list-style: none;
+}
+
+li.ilc_page_toc_PageTOCItem {
+	margin: 5px 0 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+a.ilc_page_toc_PageTOCLink {
+	color: #03a;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a.ilc_page_toc_PageTOCLink:hover {
+	color: black;
+}
+
+a.ilc_page_toc_PageTOCLink:visited {
+	color: blue;
+}
+
+/* --- content styles (will move to content.css) --- */
+td.ilc_PageDisabled {
+	padding: 20px;
+	border: 1px solid #9eadba;
+	margin-bottom: 0;
+	border-left: 3px dotted red;
+}
+
+div.ilc_DefinitionHeader {
+	margin: 20px 0 10px 0;
+	padding: 5px 0;
+	border: 1px solid black;
+	border-width: 1px 0;
+}
+
+table.ilc_Fullscreen {
+	background-color: white;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+html.ilc_Fullscreen, body.ilc_Fullscreen {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+div.ilLMMenu {
+	margin: 0 0 5px 10px;
+}
+
+div.ilc_LMMenu {
+	line-height: 22px;
+}
+
+a.ilc_LMMenu {
+	padding: 1px 5px;
+	margin: 2px 0;
+	border: 1px solid #b0b0b0;
+	background-color: #e6ecf8;
+	white-space: nowrap;
+}
+
+div.ilc_TableOfContents {
+	background-color: white;
+	padding: 20px;
+	border-spacing: 1px;
+	border: 1px solid #eee;
+	margin-bottom: 0;
+}
+
+table.ilc_media {
+	background-color: white;
+}
+
+h1.il_LMHead {
+	margin: 12px 15px 6px;
+	font-size: 120%;
+	font-weight: normal;
+}
+
+table.ilc_Table {
+	border-collapse: collapse;
+	background-color: white;
+	margin: 10px 0;
+	border-color: #9eadba;
+}
+
+/* COPage Comparison */
+
+div.ilEditModified, div.ilEditDeleted, div.ilEditNew {
+	border: 3px solid;
+	margin-bottom: 2px;
+}
+
+div.ilEditModified {
+	border-color: @brand-primary;
+}
+
+div.ilEditDeleted {
+	border-color: @brand-warning;
+}
+
+div.ilEditNew {
+	border-color: @brand-secondary;
+}
+
+.ilCOPGCompareLegend {
+	display: inline-block;
+	margin-top: 5px;
+	padding: 2px;
+}
+
+span.ilDiffDel {
+	background-color: lighten(@brand-warning, 30%);
+}
+
+span.ilDiffIns {
+	background-color: lighten(@brand-secondary, 30%);
+}
+
+a.nostyle:link, a.nostyle:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a.nostyle:hover {
+	color: black;
+}
+
+#ilEditorPanel_c {
+	z-index: 3000 !important;
+}
+
+#error_panel_c {
+	z-index: 2000 !important;
+}
+
+#ilPageEditLegend {
+	background-color: @il-secondary-container-bg;
+	padding: 10px;
+	margin-top: 30px;
+	> div {
+		margin: 5px 0;
+	}
+	.il_droparea {
+		&, &:hover {
+			display: inline-block;
+			width: 40px;
+			border-color: #d0d0d0;
+			color: #d0d0d0;
+			background-color: #fcfcfc;
+			cursor: default;
+			height: 21px;
+		}
+	}
+}
+
+.ilPageEditLegendElement {
+	width: 40px;
+	border: 1px solid #d0d0d0;
+	height: 21px;
+	display: inline-block;
+	font-size: 12px;
+	padding: 1px 5px;
+	text-align: center;
+}
+
+.ilCOPGMediaDisabled {
+	padding: 5px;
+	font-size: 0px;
+	line-height: 100%;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: darken(@brand-secondary, 20%);
+	color: white;
+}
+
+.ilCOPgEditStyleSelectionItem {
+	padding: 10px;
+	background-color: @il-primary-container-bg;
+	cursor: pointer;
+}
+
+.ilCOPgEditStyleSelectionItem:hover {
+	background-color: @il-highlight-bg;
+}
+
+ul#ilAdvSelListTable_style_selection {
+	overflow: auto;
+	max-height: 400px;
+}
+
+a.ilCOPageSection {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+#ilAdvSelListAnchorText_char_style_selection > span {
+	min-width: auto;
+}
+
+div.ilc_answers.answer-table div.ilc_qanswer_Answer {
+	display: table-row;
+}
+
+div.ilc_answers.answer-table div.ilc_qanswer_Answer > div {
+	display: table-cell;
+}
+
+div.ilc_question_SingleChoice .answertext > p, div.ilc_question_MultipleChoice .answertext > p {
+	margin: 0 !important;
+}
+
+div.ilc_question_SingleChoice .ilc_qanswer_Answer > div:first-child,
+div.ilc_question_MultipleChoice .ilc_qanswer_Answer > div:first-child {
+	padding-right: 10px;
+}
+
+.ilTinyInfo {
+	@media only screen and (max-width: @grid-float-breakpoint-max) {
+		display: none;
+	}
+}
+
+div.ilCOPGMediaPrint {
+	background-color: @il-secondary-container-bg !important;
+	position: relative !important;
+	background-image: url("@{background-images-path}play.svg") !important;
+	background-position: 50% 50% !important;
+	background-repeat: no-repeat !important;
+	background-size: auto 90% !important;
+	padding: 1px !important;
+}

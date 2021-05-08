@@ -1,0 +1,47 @@
+<!-- BEGIN prtf_edit_bl -->
+<div class="ilFloatRight">{PRTF_BLOG_EDIT}</div>
+<br class="ilClearFloat" />
+<!-- END prtf_edit_bl -->
+<!-- BEGIN month_bl -->
+<h3 class="ilHeader">{TXT_CURRENT_MONTH}</h3>
+<div class="ilBlogList">
+	<!-- BEGIN posting -->
+	<div class="ilBlogListItem{DRAFT_CLASS}">
+		<!-- BEGIN draft_text --><div class="ilBlogDraftText">{DRAFT_TEXT}</div><!-- END draft_text -->
+		<!-- BEGIN actions -->
+		<div class="ilFloatRight small">
+			<!-- BEGIN item_approval -->
+			<span class="ilBlogNavigationItemDraft smallred">{APPROVAL}</span>
+			<!-- END item_approval -->
+			{ACTION_SELECTOR}</div>
+		<!-- END actions -->
+		<div class="ilBlogListItemTitle">
+			<h3><a href="{URL_TITLE}">{TITLE}</a></h3>
+		</div>
+		<div class="ilBlogListItemSubTitle">{DATETIME}</div>
+		<div class="ilBlogListItemSnippet">
+			{CONTENT}
+		</div>
+		<!-- BEGIN more -->
+		<div class="ilBlogListItemMore">
+			<span class="small"><a href="{URL_MORE}" class="btn btn-default">{TEXT_MORE}&hellip;</a></span>
+		</div>		
+		<!-- END more -->
+		<!-- BEGIN item_actions_bl -->
+		<div class="ilBlogListItemCommtensPerma">
+			<!-- BEGIN comments -->
+			<a href="{URL_COMMENTS}">{TEXT_COMMENTS}</a> ({COUNT_COMMENTS})
+			<!-- END comments -->
+			<!-- BEGIN permalink -->
+			 &middot;  <a href="{URL_PERMALINK}">{TEXT_PERMALINK}</a>
+			 <!-- END permalink -->
+		</div>
+		<!-- END item_actions_bl -->
+		<br class="ilClearFloat" />
+	</div>
+	<!-- END posting -->
+</div>
+<!-- END month_bl -->
+<div class="ilBlogListPermalink">
+{PERMALINK}
+</div>

@@ -1,0 +1,82 @@
+.ilVerticalOrderingQuestion li { margin: 0px; }
+.ilVerticalOrderingQuestion ul { margin-top: -4px; }
+.ilVerticalOrderingQuestion li { margin-top: 4px; }
+
+ul.boxy {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	width: 250px;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+}
+
+ul.boxy li {
+	cursor:move;
+	padding: 12px 12px;
+	border: 1px solid #808080;
+	background-color: #CCCCCC;
+	text-align: center;
+}
+
+/* drag and drop support */
+
+.droparea
+{
+    border:2px solid #666;
+    background-color:#ccc;
+    color:black;
+    text-align:left;
+    margin: 5px;
+    padding: 0.5em;
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+
+@media only screen and (min-width: 992px) {
+	#sourceArea .draggable {
+		margin-left: 10px;
+	}
+}
+
+.draggable,
+.draggableHelper
+{
+    border:2px solid #666;
+    background-color: #eee;
+    color:black;
+    text-align:center;
+    margin: 5px;
+    padding: 0.5em;
+    cursor:pointer;
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+
+.draggableDisabled
+{
+    opacity: 0.5;
+}
+
+.droppableTarget
+{
+    border:2px dashed #666;
+    background-color: #ffa;
+}
+
+.droppableHover
+{
+    background-color: #cff;
+}
+
+.droparea, .draggable{
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}

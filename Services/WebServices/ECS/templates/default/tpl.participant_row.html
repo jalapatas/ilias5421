@@ -1,0 +1,34 @@
+<tr class="{CSS_ROW} small">
+	<td class="std"  style="vertical-align:top;">
+		{VAL_TITLE}
+		<div class="il_Description">{VAL_DESC}</div>
+		<input type="hidden" name="sci_mid[{S_ID}][{M_ID}]" value="1" />
+	</td>
+	<td class="std"  style="vertical-align:top;">
+			<strong>{TXT_ORG}:</strong> {VAL_ORG}<br />
+			<strong>{TXT_DNS}:</strong> {VAL_DNS}<br />
+			<strong>{TXT_EMAIL}:</strong> <a href="mailto:{VAL_EMAIL}">{VAL_EMAIL}</a><br />
+			<strong>{TXT_ABR}:</strong> {VAL_ABR}<br />
+			<strong>{TXT_ID}:</strong> {VAL_ID}
+	</td>
+	<td class="std" style="vertical-align:center;">
+		<!-- BEGIN obj_erow -->
+		{TXT_OBJ_EINFO}
+		<!-- END obj_erow -->
+	</td>
+	<td class="std" style="vertical-align:center;">
+		<!-- BEGIN obj_irow -->
+		{TXT_OBJ_IINFO}
+		<!-- END obj_irow -->
+	</td>
+	<td class="std" style="vertical-align:center;">
+		{IMPORT_SEL}
+	</td>
+    <!-- BEGIN actions -->
+	<td class="std" style="vertical-align:center;text-align: center">
+		<small>
+			{ACTIONS}
+		</small>
+	</td>
+    <!-- END actions -->
+</tr>

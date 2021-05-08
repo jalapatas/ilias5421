@@ -1,0 +1,129 @@
+.il-card {
+	padding: 0;
+	width: 100%;
+	position:relative;
+
+	background-color: @il-primary-container-bg;
+
+	img{
+		width: 100%;
+	}
+
+	/* see bug #24947 */
+	a {
+		overflow: hidden;
+	}
+
+	.thumbnail{
+		margin-bottom: 0px;
+	}
+	.card-highlight {
+		background: @il-card-highlight-bg;
+		height: @il-card-highlight-height;
+		width: 100%;
+	}
+	.card-no-highlight {
+		background-color: transparent;
+		height: 3px;
+		width: 100%;
+	}
+
+	.caption{
+		.card-title{
+			overflow-wrap: break-word;
+
+		}
+		&:nth-of-type(1n+3) {
+			border-top: 1px solid @panel-inner-border;
+		}
+
+		dl{
+			dt{
+				font-weight: normal;
+				color: @il-light-text-color;
+				font-size: @font-size-small;
+				padding-top: @padding-large-vertical;
+			}
+		}
+	}
+
+	.il-card-repository-head{
+		background-color:@il-card-repository-head-color;
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		height: @icon-size-medium + @padding-large-horizontal;
+		padding: 0 @padding-small-horizontal;
+
+		.icon.outlined{
+			filter: @il-card-repository-outlined-icon-filter;
+
+			&.disabled {
+				filter: @il-card-repository-outlined-disabled-icon-filter;
+			}
+		}
+
+		> div {
+			padding: @padding-large-vertical @padding-small-horizontal;
+			float: left;
+		}
+
+		.il-chart-progressmeter-box {
+			width: @icon-size-medium + @padding-small-horizontal;
+			height: @icon-size-medium + @padding-small-vertical;
+
+			> .il-chart-progressmeter-container .il-chart-progressmeter-viewbox {
+				max-width: 100%;
+				filter: brightness(1.2);
+			}
+		}
+
+
+		> div.il-card-repository-dropdown {
+			float:right;
+			padding: (@padding-large-vertical + @padding-base-vertical) @padding-small-horizontal;
+
+			> .dropdown {
+				> button {
+					background-color: inherit;
+					border: @il-card-repository-dropdown-border;
+					width: @icon-size-medium - @padding-large-vertical;
+					height: @icon-size-medium - @padding-large-vertical;
+
+					span.caret {
+						display: block;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.il-panel-report .il-card{
+	background-color: @il-secondary-container-bg;
+}
+
+@media (min-width: @screen-sm-min) {
+	.row-eq-height {
+		.il-card {
+			display: flex;
+			flex-direction: column;
+
+			:last-child {
+				flex-grow: 2;
+			}
+		}
+	}
+}
+
+/* see bug #25920, limit size of cards for small screens */
+@media (max-width: @screen-sm-min) {
+	.il-card {
+		max-width: @il-card-max-width-xs;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

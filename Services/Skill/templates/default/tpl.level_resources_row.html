@@ -1,0 +1,20 @@
+<tr>
+	<td>
+		<input type="checkbox" name="id[]" value="{ID}" />
+	</td>
+	<td>
+		{IMG}
+	</td>
+	<td>
+		{TITLE}
+	</td>
+	<td>
+		{PATH}
+	</td>
+	<td>
+		<input type="checkbox" name="suggested[{ID}]" <!-- BEGIN sugg_checked -->checked="checked"<!-- END sugg_checked --> value="1" />
+	</td>
+	<td>
+		<!-- BEGIN trigger_checkbox --><input type="checkbox" name="trigger[{TR_ID}]" <!-- BEGIN trig_checked -->checked="checked"<!-- END trig_checked --> value="1" /><!-- END trigger_checkbox -->
+	</td>
+</tr>

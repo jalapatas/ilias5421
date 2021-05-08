@@ -1,0 +1,29 @@
+{FORM}
+<script>
+	(function($) {
+
+		var $form = $('#form_{FORM_ID}');
+
+		$form.on('keyup keydown keypress', function(event) {
+			if (event.which == 13) {
+				if ($(event.target).prop("tagName").toLowerCase() != "textarea" &&
+						(
+								$(event.target).prop("tagName").toLowerCase() != "input"
+								||
+								$(event.target).prop("type") != "submit"
+						)) {
+					event.preventDefault();
+				}
+			}
+		});
+
+		// detect if browser supports this
+		var sampleElement = $('[form]').get(0);
+		var isIE11 = !(window.ActiveXObject) && "ActiveXObject" in window;
+		if (sampleElement && window.HTMLFormElement && sampleElement.form instanceof HTMLFormElement && !isIE11) {
+			// browser supports it, no need to fix
+			return;
+		}
+
+	})(jQuery);	
+</script>

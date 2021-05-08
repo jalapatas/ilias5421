@@ -1,0 +1,13 @@
+<script type="text/javascript">
+il.Util.addOnLoad((function($) {
+	return function () {
+		$("body").ilSessionReminder({
+			url: "{URL}",
+			client_id: "{CLIENT_ID}",
+			hash: "{SESSION_ID_HASH}",
+			frequency: {FREQUENCY},
+			debug: {DEBUG}
+		});
+	};
+})(jQuery));
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{META_CONTENT_LANGUAGE}" dir="{LANGUAGE_DIRECTION}">
+<head>
+	<title>{WINDOW_TITLE} {PAGETITLE}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="{LOCATION_STYLESHEET}" />
+	<!-- BEGIN ContentStyle -->
+	<link rel="stylesheet" type="text/css" href="{LOCATION_CONTENT_STYLESHEET}" />
+	<!-- END ContentStyle -->
+	<!-- BEGIN SyntaxStyle -->
+	<link rel="stylesheet" type="text/css" href="{LOCATION_SYNTAX_STYLESHEET}" />
+	<!-- END SyntaxStyle -->
+	<!-- BEGIN js_file -->
+	<script type="text/javascript" src="{JS_FILE}"></script>
+	<!-- END js_file -->
+	<!-- BEGIN css_file -->
+	<link rel="stylesheet" type="text/css" href="{CSS_FILE}" media="{CSS_MEDIA}" />
+	<!-- END css_file -->
+</head>
+<body>
+{INLINE_JS}
+<div class="ilInvisibleBorder">
+	<div class="ilc_page_frame_PageFrame">
+		<div class="ilc_page_cont_PageContainer">
+			<h1 class="ilc_page_title_PageTitle">{TXT_TERM}</h1>
+			<!-- BEGIN definition -->
+			<!-- BEGIN definition_header -->
+			<div class="ilc_DefinitionHeader">{TXT_DEFINITION}</div>
+			<!-- END definition_header -->
+			{PAGE_CONTENT}
+			<!-- END definition -->
+		</div>
+	</div>
+</div>
+<!-- BEGIN on_load_code -->
+<script type="text/javascript">
+	il.Util.addOnLoad(function() {
+		<!-- BEGIN on_load_code_inner -->{OLCODE}
+		<!-- END on_load_code_inner -->
+	});
+</script>
+<!-- END on_load_code -->
+</body>
+</html>

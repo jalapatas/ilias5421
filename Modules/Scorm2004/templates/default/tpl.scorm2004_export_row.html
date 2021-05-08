@@ -1,0 +1,21 @@
+<tr>
+<!-- BEGIN checkbox -->
+	<td>
+		<input type="checkbox" name="file[]" value="{CB_FILENAME}" id="cb_{CB_ID}" />
+		<input type="hidden" name="type[{CB_FILENAME}]" value="{FILETYPE}" />
+	</td>
+<!-- END checkbox -->
+	<td><label for="cb_{CB_ID}">{TYPE}</label></td>
+	<td>
+		<label for="cb_{CB_ID}">{FILENAME}</label>
+<!-- BEGIN hidden -->
+		<input type="hidden" name="file[]" value="{HIDDEN_FILENAME}" />
+		<input type="hidden" name="type[]" value="{HIDDEN_TYPE}" />
+<!-- END hidden -->
+	</td>
+	<td>{SIZE}</td>
+	<td>{DATE}</td>
+	<!-- BEGIN action -->
+	<td><a href="{DOWNLOAD_HREF}">{DOWNLOAD_TXT}</a></td>
+	<!-- END action -->
+</tr>

@@ -1,0 +1,34 @@
+<tr class="{CSS_ROW}">
+	<td class="std">
+		<input type="checkbox" name="waiting[]" value="{VAL_ID}" />
+	</td>
+	<td class="std">
+		{VAL_NAME}
+		<!-- BEGIN access_warning -->
+		<br />
+		<font class="smallred">
+			{ALERT_MSG}
+		</font>
+		<!-- END access_warning -->
+	</td>
+	<!-- BEGIN custom_fields -->
+	<td class="std" style="vertical-align: top">
+		{VAL_CUST}
+	</td>
+	<!-- END custom_fields -->
+	<td class="std">
+		{VAL_SUBTIME}
+	</td>
+	<td class="std">
+			<!-- BEGIN as_link -->
+			<div class="il_ContainerItemCommands2">
+			<!-- BEGIN link -->
+				<a class="il_ContainerItemCommand2" href="{MAIL_LINK}">{MAIL_TITLE}</a><br />
+		 	<!-- END link -->
+				<!-- BEGIN as_menu -->
+				{ACTION_USER}
+				<!-- END as_menu -->
+		 	</div>
+			<!-- END as_link -->
+	</td>
+</tr>

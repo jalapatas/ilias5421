@@ -1,0 +1,34 @@
+/* Services/Init */
+
+div.ilStartupFrame {
+	@media only screen and (max-width: @grid-float-breakpoint-max) {
+		width: 100%;
+	}
+}
+
+.ilStartupSection {
+	padding-top: 25px;
+	@media only screen and (max-width: @grid-float-breakpoint-max) {
+		padding-top: 15px;
+	}
+}
+
+div.ilStartupSection form.form-horizontal {
+	text-align: left;
+	width: 40em;
+	@media only screen and (max-width: @grid-float-breakpoint-max) {
+		width: auto;
+	}
+}
+
+div#il_startup_logo img {
+	height: @il-logo-height;
+	width: @il-logo-width;
+	margin: @il-logo-margin;//15px;
+	@media only screen and (max-width: @grid-float-breakpoint-max) {
+		margin: @il-logo-resp-margin;//10px;
+		max-width: 100%;
+		height: @il-logo-resp-height;
+		width: @il-logo-resp-width;
+	}
+}

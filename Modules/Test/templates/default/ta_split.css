@@ -1,0 +1,10 @@
+#tst_left {
+	float: left;
+	width: 19%;
+}
+
+#tst_right {
+	float: right;
+	width: 80%;
+}
+

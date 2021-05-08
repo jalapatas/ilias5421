@@ -1,0 +1,25 @@
+<tr class="{CSS_ROW}">
+	<td class="std" style="text-align:center;">
+		<img src="{IMAGE_OK}" title="{TXT_OK}" alt="{TXT_OK}" border="0">
+	</td>
+	<td class="std small"  style="vertical-align:top;">
+		<a href="{LINK_EDIT}">{VAL_TITLE}</a>
+		<div>
+			<strong>{TXT_SRV_ADDR}:</strong> {VAL_DESC}
+		</div>
+		<!-- BEGIN cert_valid -->
+		<div>
+			<strong>{TXT_CERT_VALID}: </strong>
+			<!-- BEGIN invalid --><font class="smallred">{VAL_ICERT}</font><!-- END invalid -->
+			<!-- BEGIN valid -->{VAL_VCERT}<!-- END valid -->
+		</div>
+		<!-- END cert_valid -->
+	</td>
+    <!-- BEGIN actions -->
+	<td class="std">
+		<div class="il_ContainerItemCommand2">
+			{ACTIONS}
+		</div>
+	</td>
+    <!-- END actions -->
+</tr>

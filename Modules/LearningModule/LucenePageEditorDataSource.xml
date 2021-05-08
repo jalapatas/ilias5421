@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSource type="JDBC" action="append">
+	<Query>
+		SELECT content FROM page_object
+		WHERE page_id = ?
+		AND parent_type = 'cont'
+	</Query>
+	<Param format="list" type="int" value="objId" />
+	<Field store="YES" index="ANALYZED" column="content" type="text" name="content">
+		<Transformer name="ContentObjectTransformer" />
+	</Field>
+</DataSource>
+ 

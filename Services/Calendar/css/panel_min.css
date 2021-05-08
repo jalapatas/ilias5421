@@ -1,0 +1,4 @@
+/* Provide skin for default Panel elements, ontop of container-core.css */
+.yui-panel .container-close {
+	background-color: transparent;
+}

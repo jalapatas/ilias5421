@@ -1,0 +1,155 @@
+<tr class="{CSS_ROW}">
+	
+  <td class="std">
+	<!-- BEGIN multi_bl -->
+	<input type="checkbox" name="{NAME_ID}[{VAL_ID}]" value="1" />
+	<input type="hidden" name="id[{VAL_ID}]" value = "1" />
+	<input type="hidden" name="idlid[{VAL_ID}]" value="{VAL_IDL_ID}" />
+	<!-- END multi_bl -->
+  </td>
+  
+  
+  <!-- BEGIN member_specific -->
+  
+  <!-- BEGIN img_bl -->
+  <td class="std">
+	<img class="ilUserXXSmall" src="{VAL_IMAGE}" title="{TXT_IMAGE}" alt="{TXT_IMAGE}" />
+  </td>
+  <!-- END img_bl -->
+  
+  <td class="std">
+	 {VAL_NAME}
+	<!-- BEGIN access_warning -->
+	<div class="smallred">
+		{PARENT_ACCESS}
+	</div>
+	<!-- END access_warning -->
+  </td>
+  
+   <!-- BEGIN team_bl -->
+  <td class="std small">
+	 <!-- BEGIN team_member_bl --> 
+	 {VAL_TEAM_MEMBER}<br />
+	 <!-- END team_member_bl -->
+  </td>
+  <!-- END team_bl -->
+  
+  <!-- BEGIN login_bl -->
+  <td class="std">
+	 {VAL_LOGIN}
+  </td>
+  <!-- END login_bl -->
+  
+  <!-- END member_specific -->
+  
+  
+  <!-- BEGIN team_specific -->
+  
+  <td class="std">	  
+	  <!-- BEGIN team_member -->
+	  {TXT_MEMBER_NAME} 		
+	  <!-- BEGIN team_access_warning -->
+	  <span class="smallred">
+		  {TEAM_PARENT_ACCESS}
+	  </span>
+	  <!-- END team_access_warning -->
+	  <!-- BEGIN team_member_removal_bl -->
+	  <a href="{URL_TEAM_MEMBER_REMOVAL}">{TXT_TEAM_MEMBER_REMOVAL}</a>
+	  <!-- END team_member_removal_bl -->	 	
+	  <br />
+	  <!-- END team_member -->
+	  <!-- BEGIN team_log -->
+	  <div>
+		  <a href="{HREF_LOG}" class="il_ContainerItemCommand">{TXT_LOG}</a>
+	  </div>
+	  <!-- END team_log -->
+	  <!-- BEGIN team_info -->	  
+	  <div class="small">{TXT_TEAM_INFO}
+		  <!-- <a href="{URL_CREATE_TEAM}">{TXT_CREATE_TEAM}</a> -->
+		  {TEAM_FILES_INFO}
+	  </div>
+	  <!-- END team_info -->
+  </td>
+  
+  <!-- END team_specific -->
+  	
+  <!-- BEGIN sent_time -->
+  <td class="std small">
+	{VAL_SENT_TIME}
+  </td>
+  <!-- END sent_time -->  
+  
+  <!-- BEGIN member_has_team_bl -->
+  
+  <!-- BEGIN submission -->
+  <td class="std small">
+	{VAL_SUBMISSION}
+	<!-- BEGIN late_bl -->
+	<div class="warning">{TXT_LATE}</div>
+	<!-- END late_bl -->
+  </td>
+  <!-- END submission -->
+
+	<!-- BEGIN calc_deadline -->
+	<td class="std small">
+		{VAL_CALC_DEADLINE}
+	</td>
+	<!-- END calc_deadline -->
+
+	<!-- BEGIN idl -->
+  <td class="std small">
+	{VAL_IDL}
+  </td>
+  <!-- END idl -->
+  
+  <!-- BEGIN status -->
+  <td class="std small">
+	<select class="form-control" name="status[{VAL_ID}]" >
+		<option value="notgraded" {SEL_NOTGRADED}>{TXT_NOTGRADED}</option>
+		<option value="passed" {SEL_PASSED}>{TXT_PASSED}</option>
+		<option value="failed" {SEL_FAILED}>{TXT_FAILED}</option>
+	</select>
+  </td>
+  <!-- END status -->
+  
+  <!-- BEGIN mark -->
+  <td class="std small">
+	<input class="form-control" type="text" name="mark[{VAL_ID}]" value="{VAL_MARK}" size="4" maxlength="32" />
+  </td>
+  <!-- END mark -->
+  
+  <!-- BEGIN no_team_yet_bl -->
+  <td class="std small" colspan="{NO_TEAM_COLSPAN}">
+	&nbsp;
+  </td>
+  <!-- END no_team_yet_bl -->
+  
+  <!-- BEGIN status_time -->
+  <td class="std small">
+	{VAL_STATUS_TIME}
+  </td>
+  <!-- END status_time -->
+  
+  <!-- BEGIN feedback_time -->
+  <td class="std small">
+	{VAL_FEEDBACK_TIME}
+  </td>
+  <!-- END feedback_time -->
+  
+  <!-- BEGIN comment -->
+  <td class="std small">
+	  <div id="{LCOMMENT_ID}">{VAL_COMMENT}</div>
+  </td>
+  <!-- END comment -->
+  
+  <!-- BEGIN notice -->
+  <td class="std small">
+	  <input class="form-control" type="text" name="notice[{VAL_ID}]" value="{VAL_NOTICE}" size="25" maxlength="200" />
+  </td>
+  <!-- END notice -->
+  
+  <td class="std small">
+	  {ACTIONS}
+  </td>
+  
+</tr>

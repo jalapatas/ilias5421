@@ -1,0 +1,51 @@
+{NAVIGATION}
+<table class="calstd il-cal-month">
+	<thead>
+	<tr class="calheader">
+		<!-- BEGIN month_header_col -->
+		<th class="calstd" width="14%">{TXT_WEEKDAY}</th>
+		<!--  END month_header_col -->
+	</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN month_row -->
+	<tr class="calstd">
+		<!-- BEGIN month_col -->
+		<td class="{TD_CLASS}" >
+			<div style="float:left">
+				<p class="il_cal_monthday">
+				<!-- BEGIN month_day_link -->
+				<a class="callink" href="{OPEN_DAY_VIEW}">{MONTH_DAY}</a>
+				<!-- END month_day_link -->
+				<!-- BEGIN month_day_no_link -->
+				{MONTH_DAY}
+				<!-- END month_day_no_link -->
+				</p>
+			</div>
+			<div style="float:right">
+				<p class="il_cal_navigation">
+					<!-- BEGIN new_app -->{NEW_GLYPH}<!-- END new_app -->
+					<!-- BEGIN new_ms -->	
+					<div class="btn-group">
+						<div class="dropdown-toggle callink" data-toggle="dropdown" data-container="body" id="add_dd_tr_{DD_ID}" type="button">
+							{DD_TRIGGER}
+						</div>
+						<ul class="dropdown-menu pull-right" role="menu" id="add_dd_{DD_ID}">
+							<li><a href="{URL_DD_NEW_APP}">{TXT_DD_NEW_APP}</a></li>						
+							<li><a href="{URL_DD_NEW_MS}">{TXT_DD_NEW_MS}</a></li>						
+					</ul>					
+					</div>
+					<!-- END new_ms -->
+				</p>
+			</div>
+			<div style="clear:both" />
+			</div>
+			<!-- BEGIN event_nfd -->
+			{EVENT_CONTENT}
+			<!-- END event_nfd -->
+		</td>
+		<!-- END month_col -->
+	</tr>
+	<!-- END month_row -->
+	</tbody>
+</table>

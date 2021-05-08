@@ -1,0 +1,31 @@
+<tr class="{CSS_ROW}" >
+	<td class="std">
+		<!-- BEGIN del_role -->
+		<input type="checkbox" name="roles[]" value="{VAL_ID}" />
+		<!-- END del_role -->
+	</td>
+	<td class="std">
+		<!-- BEGIN title_plain -->
+		{VAL_TITLE}
+		<!-- END title_plain -->
+		<!-- BEGIN title_linked -->
+		<a href="{VAL_LINK}">{VAL_TITLE_LINKED}</a>
+		<!-- END title_linked -->
+
+		<div class="il_Description">{VAL_DESC}</div>
+		<!-- BEGIN predefined -->
+		<div class="il_Description"><strong>{VAL_PRE}</strong></div>
+		<!-- END predefined -->
+	</td>
+	<td class="std">
+		{ROLE_TYPE}
+	</td>
+	<td class="std">
+		{CONTEXT}
+	</td>
+	<td class="std">
+	<!-- BEGIN action_col -->
+		<a class="il_ContainerItemCommand2" href="{COPY_LINK}">{COPY_TEXT}</a>
+	<!-- END action_col -->
+	</td>
+</tr>

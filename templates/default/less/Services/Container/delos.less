@@ -1,0 +1,251 @@
+/* Services/Container */
+div.il_Preconditions {
+	padding: 10px 0 0;
+}
+
+div.il_PreconditionsTitel {
+	margin-top: 3px;
+	text-align: left;
+	font-size: 90%;
+}
+
+[dir="rtl"] div.il_PreconditionsTitel {
+	text-align: right;
+}
+
+div.ilPreconditionItem {
+	margin: 0 -10px;
+}
+
+/* Repository */
+div.ilContainerListItemOuter {
+	padding: 15px 10px;
+	zoom: 1;
+	/* background-color: lighten(@mid-gray, 75%); */
+}
+[dir="rtl"] div.ilContainerListItemOuter {
+	display: table;
+}
+div.tblfooter {
+	&.ilContainerListFooter {
+		font-size: 100%;
+		padding: 3px 0 0 10px;
+		text-align: left;
+		> input {
+			padding: 0;
+			margin: 0;
+		}
+		> label {
+			margin: 0;
+			padding: 0 0 0 8px;
+			vertical-align: top;
+		}
+	}
+}
+
+input[name^="position[blocks]"] {
+	margin: 0 0 0 -2px;
+}
+
+
+[dir="rtl"] .ilContainerListFooter {
+	padding-left: 0;
+	padding-right: 15px;
+}
+
+div.ilListItemSection {
+	clear:both;
+    max-width: calc(~"100% - 40px");
+}
+
+div.ilContainerListItemOuterHighlight {
+	padding: 15px;
+	background-color: #ffffd9;
+	zoom: 1;
+}
+
+
+.ilCLI {
+	padding: 0;
+}
+
+div.ilContainerListItemCB {
+	/*float: left;
+	width: 25px;*/
+	display: table-cell;
+	vertical-align: top;
+	padding-right: 10px;
+}
+
+[dir="rtl"] div.ilContainerListItemCB {
+	/* float: right; */
+}
+
+div.ilContainerListItemIcon {
+	/* margin-top: -3px;
+	   float: left;
+	position: absolute; */
+	display: table-cell;
+	vertical-align: top;
+}
+div.ilContainerListItemIcon a {
+	display: block;
+	margin-top: -3px;
+}
+
+[dir="rtl"] div.ilContainerListItemIcon {
+	float: right;
+}
+
+div.ilContainerListItemIconCB {
+	margin-left: 25px;
+}
+
+[dir="rtl"] div.ilContainerListItemIconCB {
+	margin-left: 0;
+	margin-right: 25px;
+}
+
+div[class^="il_editarea"] .ilContainerListItemOuter img,
+img.ilListItemIcon {
+	width: 35px;
+	height: 35px;
+	max-width: none;
+}
+
+div.ilContainerListItemContent {
+	/* margin-left: 35px; */
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+
+[dir="rtl"] div.ilContainerListItemContent {
+	/* margin-left: 0;
+	margin-right: 35px; */
+}
+
+/* If checkbox is activated, add spacing */
+div.ilContainerListItemContentCB {
+	/* margin-left: 60px; */
+}
+
+[dir="rtl"] div.ilContainerListItemContentCB {
+	/* margin-left: 0;
+	margin-right: 60px; */
+}
+
+div.il_ContainerListItem {
+	margin: 2px 0;
+	padding-left: 8px;
+	width:100%;
+}
+
+[dir="rtl"] div.il_ContainerListItem {
+	padding-left: 0;
+	padding-right: 8px;
+}
+
+.ilContainerBlockHeader {
+	font-weight: 400;
+	padding: 5px 10px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.ilContainerBlockHeaderExpanded, .ilContainerBlockHeaderCollapsed {
+	background-repeat: no-repeat;
+	background-position: 20px 8px;
+	padding-left: 50px;
+	/* padding-top: 6px; */
+	background-color: @il-secondary-container-bg;
+	cursor: pointer;
+	margin-bottom: 1px;
+}
+
+.ilContainerBlockHeaderExpanded {
+	background-image: url("images/tree_exp.svg");
+}
+
+.ilContainerBlockHeaderCollapsed {
+	background-image: url("images/tree_col.svg");
+	/* background-color: @il-secondary-container-bg; */
+}
+
+.ilContainerBlockHeaderExpanded:hover, .ilContainerBlockHeaderCollapsed:hover {
+	background-color: @il-highlight-bg;
+}
+
+[dir="rtl"] .ilContainerBlockHeader {
+	text-align: right;
+}
+
+h3.ilContainerBlockHeader {
+}
+
+.ilContainerBlock {
+	width: 100%;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+div#cont_paste_explorer_tree ul.il_Explorer {
+	margin: 0 0 0 24px;
+}
+
+[dir="rtl"] div#cont_paste_explorer_tree ul.il_Explorer {
+	margin: 0 24px 0 0;
+}
+
+#ilContRepIntro {
+	margin: 20px 0 50px 0;
+	clear:both;
+}
+
+div#ilContRepIntro img {
+	float: right;
+	width: 150px;
+	height: 150px;
+}
+
+[dir="rtl"] div#ilContRepIntro img {
+	float: left;
+}
+
+.ilContObjectiveObjectListItem {
+	background-color: @il-primary-container-bg;
+}
+
+.ilContObjectiveIntro {
+	background-color: @il-primary-container-bg;
+	padding: 1px 15px;
+}
+
+.ilContObjectivesViewTestItem {
+	background-color: @il-primary-container-bg;
+	margin-bottom: 10px;
+}
+
+
+.ilContainerTileRows {
+	margin: 10px -20px 0 -20px;
+}
+
+.ilContainerTileRows .card-no-highlight {
+	height: 0px;
+}
+
+.ilContainerTileRows .il-chart-progressmeter-container {
+	height: 100%;
+}
+
+.ilContainerTileRows .il-card h5 button.btn {
+	font-size: inherit;
+}
+
+.ilContainerShowMore {
+	padding: 15px 10px;
+	background-color: @il-primary-container-bg;
+	text-align: center;
+	margin: 0 -15px;
+}

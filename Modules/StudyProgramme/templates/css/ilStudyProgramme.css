@@ -1,0 +1,33 @@
+.ilCLI .ilContainerListItemOuter .ilContainerListItemCB .il_PrgExpandedImage {
+	display: none;
+}
+
+.il_PrgAccordionHeadActive .ilContainerListItemOuter .ilContainerListItemCB .il_PrgExpandedImage {
+	display: inline;
+}
+
+.ilCLI .ilContainerListItemOuter .ilContainerListItemCB .il_PrgNotExpandedImage {
+	display: inline;
+}
+
+.il_PrgAccordionHeadActive .ilContainerListItemOuter .ilContainerListItemCB .il_PrgNotExpandedImage {
+	display: none;
+}
+
+/* Sub Tabs */
+#ilSubTabStudyProgramme {
+	margin: -5px;
+}
+#ilSubTabStudyProgramme > li > a {
+	font-size: 11.64px;
+}
+#ilSubTabStudyProgramme > li > a:hover {
+	color: #3a4c65;
+}
+#ilSubTabStudyProgramme > li.active > a,
+#ilSubTabStudyProgramme > li.active > a:hover,
+#ilSubTabStudyProgramme > li.active > a:focus {
+	color: #557196;
+	background-color: transparent;
+	text-decoration: underline;
+}

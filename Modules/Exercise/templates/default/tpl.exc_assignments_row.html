@@ -1,0 +1,38 @@
+<tr class="{CSS_ROW}">
+	<td class="std">
+	<input type="checkbox" name="id[]" value="{ID}" />
+	</td>
+	<td class="std small">
+	{TXT_TITLE}
+	</td>
+	<td class="std small">
+	{TXT_TYPE}
+	</td>
+	<td class="std small">
+	<input class="form-control" type="text" size="4" maxlength="4" name="order[{ID}]" value="{ORDER_VAL}" />
+	</td>
+	<td class="std small ilWhiteSpaceNowrap">
+	{TXT_START_TIME}
+	</td>
+	<td class="std small ilWhiteSpaceNowrap">
+	{TXT_DEADLINE}
+	</td>
+	<td class="std small">
+	{TXT_MANDATORY}
+	</td>
+	<td class="std small">
+	{TXT_PEER}
+	<!-- BEGIN peer_invalid_bl -->
+	<div><span class="il_ItemAlertProperty">{TXT_PEER_INVALID}</span></div>
+	<!-- END peer_invalid_bl -->
+	</td>
+	<td class="std small">
+	{TXT_INSTRUCTIONS}
+	</td>
+	<td class="std small">
+	<a href="{CMD_EDIT}">{TXT_EDIT}</a>
+	<!-- BEGIN peer_cmd_bl -->
+	<br /><a href="{CMD_PEER_OVERVIEW}">{TXT_PEER_OVERVIEW}</a>
+	<!-- END peer_cmd_bl -->
+	</td>
+</tr>

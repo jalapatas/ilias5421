@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<service xmlns="http://www.w3.org" version="$Id$"
+	id="pwsp">
+	<baseclasses>
+		<baseclass name="ilSharedResourceGUI" dir="classes" />
+	</baseclasses>
+	<gsproviders>
+		<gsprovider purpose="mainmenu" class_name="ilWorkspaceGlobalScreenProvider" />
+	</gsproviders>
+	<crons>
+		<cron id="pwsp_recalc_quota" class="ilCronPersonalWorkspaceRecalculateQuota" />
+	</crons>
+</service>

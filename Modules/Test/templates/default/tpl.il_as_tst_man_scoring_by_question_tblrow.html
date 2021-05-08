@@ -1,0 +1,59 @@
+<tr class="{CSS_ROW}">
+	<td class="std">{PARTICIPANT_LASTNAME}</td>
+	<!-- BEGIN personal -->
+	<td class="std">{PARTICIPANT_FIRSTNAME}</td>
+	<td class="std">{PARTICIPANT_LOGIN}</td>
+	<!-- END personal -->
+	<td class="std">
+		{VAL_REACHED_POINTS}
+		<!-- BEGIN reached_points_alert -->
+		<div class="ilFormInfo">
+				<img border="0" alt="{REACHED_POINTS_ALT_ALERT}" src="{REACHED_POINTS_IMG_ALERT}">
+				{REACHED_POINTS_TXT_ALERT}
+		</div>
+		<!-- END reached_points_alert -->
+	</td>
+	<td class="std">
+		<a class="il_ContainerItemCommand iosAssAnswerModalTrigger" data-answer-href="{VAL_LINK_ANSWER}" href="#">{VAL_TXT_ANSWER}</a>
+		<!-- BEGIN row_js -->
+		<script type="text/javascript">
+			(function($) {
+				$().ready(function() {
+					$(".iosAssAnswerModalTrigger").on("click", function(e) {
+						var $this = $(this),
+							modal = $this.data("modal");
+
+						e.preventDefault();
+						e.stopPropagation();
+
+						if (modal == undefined) {
+							$.ajax({
+								url: $this.data("answer-href"),
+								dataType: 'html',
+								success: function(data) {
+									modal = il.Modal.dialogue({
+										show:    false,
+										header:  il.Language.txt('answer'),
+										body:    data,
+										buttons: {}
+									});
+
+									$this.data("modal", modal);
+
+									if (typeof MathJax != "undefined") {
+										MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+									}
+
+									modal.show();
+								}
+							})
+						} else {
+							modal.show();
+						}
+					});
+				});
+			}(jQuery));
+		</script>
+		<!-- END row_js -->
+	</td>
+</tr>

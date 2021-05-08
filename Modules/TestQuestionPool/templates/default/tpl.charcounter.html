@@ -1,0 +1,76 @@
+<script type="text/javascript">
+
+<!-- BEGIN tinymce_handler -->
+
+var updateAssTextQuestionLetterCounter = 0;
+
+var charCounter = function(e) // default handler hard coded to tinymce config
+{
+    if (typeof tinyMCE != 'undefined') {
+        tinyMCE.triggerSave(); // this updates the textarea input
+    }
+    
+    if( e.type == 'keyup' )
+    {
+        if(updateAssTextQuestionLetterCounter)
+        {
+            updateAssTextQuestionLetterCounter();
+        }
+    }
+};
+
+<!-- END tinymce_handler -->
+
+<!-- BEGIN letter_counter_js -->
+
+(function($)
+{
+    var qId = {QID};
+    var maxL = {MAXCHARS};
+
+    var stripAndDecode = function(string)
+    {
+        return string
+            .replace(/(<([^>]+)>)/ig, "")
+            .replace(/&lt;/ig, "<")
+            .replace(/&gt;/ig, ">")
+            .replace(/\r?\n|\r/g, ' ')
+            .replace(/&nbsp;/gi, " ")
+            .replace(/&amp;/gi, "&");
+    };
+    
+    updateAssTextQuestionLetterCounter = function()
+    {
+        var ccContainer = $('#assTextQuestionLetterCounterContainer_'+qId);
+
+        if( ccContainer )
+        {
+            ccContainer.show();
+        }
+
+        var charCounter = $('#assTextQuestionLetterCounter_'+qId);
+        
+        if( charCounter )
+        {
+            var content = $('#assTextQuestionContent_'+qId).val();
+            content = stripAndDecode(content);
+            charCounter.val( maxL - content.length );
+        }
+
+        return true;
+    };
+    
+    $().ready(function(){
+
+        $('textarea#assTextQuestionContent_'+qId).on('keyup', function(event) {
+            updateAssTextQuestionLetterCounter();
+        });
+
+        updateAssTextQuestionLetterCounter();
+    });
+    
+})(jQuery);
+
+<!-- END letter_counter_js -->
+
+</script>
